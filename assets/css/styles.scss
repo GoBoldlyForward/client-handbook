@@ -7,6 +7,19 @@
   $red:         #f33c17;
   $yellow:      #ffce04;
 
+  .dark-text {
+    color: $dark !important;
+  }
+  .white-text {
+    color: $offwhite !important;
+  }
+  .red-text {
+    color: $red !important;
+  }
+  .yellow-text {
+    color: $yellow !important;
+  }
+
 // Resets
 
 * {
@@ -102,29 +115,56 @@ h2 {
 
   header {
     padding: 4rem 0 0 4rem;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left:22px;
+      top: 66px;
+      z-index: 100;
+      display: block;
+      width: 22px;
+      height: 110px;
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
 
     h2 {
       font-size: 32px;
       font-weight: 900;
-      border-bottom: 4px solid $offwhite;
     }
 
     h3 {
       font-size: 14px;
       font-weight: 900;
+      padding-bottom: 4px;
+      border-bottom: 4px solid $offwhite;
     }
-
 
   }
 
   &.issue-one {
     background-color: $red;
+
+    header:before {
+      background-image: url(../images/svg/piller-1-icn.svg);
+    }
+
   }
   &.issue-two {
     background-color: $dark;
+
+    header:before {
+      background-image: url(../images/svg/piller-2-icn.svg);
+    }
   }
   &.issue-three {
     background-color: $yellow;
+
+    header:before {
+      background-image: url(../images/svg/piller-3-icn.svg);
+    }
   }
 
 }
