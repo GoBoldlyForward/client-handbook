@@ -105,13 +105,22 @@ h2 {
 
 // PILLERS
 
-.piller {
-  color: $offwhite;
+a.piller {
+  display: block;
+  color: $offwhite !important;
+  border-width: 4px;
+  border-style: solid;
   margin: 2rem 0;
   padding-bottom: 2rem;
   -webkit-box-shadow: -8px 8px 0px 0px rgba(0,0,0,0.1);
   -moz-box-shadow: -8px 8px 0px 0px rgba(0,0,0,0.1);
   box-shadow: -8px 8px 0px 0px rgba(0,0,0,0.1);
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    transform: translate3d(2px,-10px, 0);
+    box-shadow: -12px 18px 6px 0px rgba(0,0,0,0.2);
+  }
 
   header {
     padding: 4rem 0 0 4rem;
@@ -145,6 +154,7 @@ h2 {
   }
 
   &.issue-one {
+    border-color: $red;
     background-color: $red;
 
     header:before {
@@ -153,6 +163,7 @@ h2 {
 
   }
   &.issue-two {
+    border-color: $dark;
     background-color: $dark;
 
     header:before {
@@ -160,6 +171,7 @@ h2 {
     }
   }
   &.issue-three {
+    border-color: $yellow;
     background-color: $yellow;
 
     header:before {
