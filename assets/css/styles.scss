@@ -1,0 +1,156 @@
+// POLAR NOTION - BOLDY FORWARD VOL. 1
+
+// Colors
+
+  $dark:        #221e1d;
+  $offwhite:    #fefdf0;
+  $red:         #f33c17;
+  $yellow:      #ffce04;
+
+// Resets
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #fefdf0;
+  font-family: helvetica;
+  color: $dark;
+}
+
+img {
+  width: 100%;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+svg {
+  max-width: 100%;
+}
+
+// Typography
+h1 {
+
+}
+
+h2 {
+  font-weight: 900;
+}
+
+// header
+
+.branding {
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+
+  .title {
+    p {
+      font-size: 14px;
+      line-height: 1.2;
+      padding: 0 10px 0 0;
+      margin: 0 0 .5rem 0;
+    }
+  }
+
+  .logo {
+    .st0{fill: $dark;}
+    .st1{fill: $offwhite;}
+  }
+
+  .age-group {
+    border-top: 4px solid $dark;
+    margin-top: -9px;
+    padding: .5rem 0;
+  }
+
+}// branding
+
+#header {
+  padding: 120px 0;
+
+  .headline {
+    margin-bottom: 2rem;
+    background: url(../images/svg/tunnel_animated_loop.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  h2 {
+    color: $red;
+  }
+
+} // header
+
+
+// PILLERS
+
+.piller {
+  color: $offwhite;
+  margin: 2rem 0;
+  padding-bottom: 2rem;
+  -webkit-box-shadow: -8px 8px 0px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: -8px 8px 0px 0px rgba(0,0,0,0.1);
+  box-shadow: -8px 8px 0px 0px rgba(0,0,0,0.1);
+
+  header {
+    padding: 4rem 0 0 4rem;
+
+    h2 {
+      font-size: 32px;
+      font-weight: 900;
+      border-bottom: 4px solid $offwhite;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+
+  }
+
+  &.issue-one {
+    background-color: $red;
+  }
+  &.issue-two {
+    background-color: $dark;
+  }
+  &.issue-three {
+    background-color: $yellow;
+  }
+
+}
+
+
+//footer
+#footer {
+  text-align: center;
+
+  img {
+    width: 240px;
+  }
+
+  .sub-footer {
+    background: $dark;
+    padding: 2rem 0;
+    margin-top: 2rem;
+
+    a {
+      color: $dark;
+      font-weight: 900;
+      text-decoration: none;
+
+      &:hover {
+        color: darken($dark, 10%);
+      }
+    }
+  }
+}
