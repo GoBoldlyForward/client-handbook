@@ -46,12 +46,28 @@ svg {
   max-width: 100%;
 }
 
-// Typography
-h1 {
+hr {
+  border-color: $red;
+  border-width: 3px;
+  margin: 4rem 0;
+}
 
+// Typography
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  line-height: .85;
+  margin-bottom: 2rem;
 }
 
 h2 {
+  font-size: 2rem;
   font-weight: 900;
 }
 
@@ -87,7 +103,7 @@ h2 {
 }// branding
 
 #header {
-  padding: 120px 0;
+  padding: 120px 0 0;
 
   .headline {
     margin-bottom: 2rem;
@@ -102,6 +118,19 @@ h2 {
 
 } // header
 
+// intro-text
+
+.intro-text {
+  margin-bottom: 4rem;
+  p {
+    padding: 2rem 0;
+    margin-bottom: 0;
+    font-weight: 900;
+  }
+  img {
+    padding: 0 2rem;
+  }
+}//intro-text
 
 // PILLERS
 
@@ -110,7 +139,7 @@ a.piller {
   color: $offwhite !important;
   border-width: 0px;
   border-style: solid;
-  margin: 2rem 0;
+  margin: 0 0 6rem;
   padding-bottom: 2rem;
   -webkit-box-shadow: -8px 8px 0px 0px rgba(0,0,0,0.1);
   -moz-box-shadow: -8px 8px 0px 0px rgba(0,0,0,0.1);
@@ -139,9 +168,11 @@ a.piller {
       background-position: top center;
     }
 
-    h2 {
+    h1 {
       font-size: 32px;
+      line-height: 1.2;
       font-weight: 900;
+      margin-bottom: 1rem;
     }
 
     h3 {
@@ -149,6 +180,10 @@ a.piller {
       font-weight: 900;
       padding-bottom: 4px;
       border-bottom: 4px solid $offwhite;
+    }
+
+    p {
+      font-size: 1rem;
     }
 
   }
@@ -179,8 +214,30 @@ a.piller {
     }
   }
 
+  .piller-graphic {
+    margin: 8rem 0 6rem;
+  }
+
+  .piller-footer {
+    padding-left: 18px;
+
+    img {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+} // pillers
+
+// inspiration
+.inspiration-header {
+  background: url(../images/svg/baller_animated.svg) right bottom no-repeat;
+  margin-bottom: 8rem;
 }
 
+.inspiration {
+  
+}
 
 //footer
 #footer {
@@ -205,4 +262,4 @@ a.piller {
       }
     }
   }
-}
+} // footer
