@@ -137,9 +137,10 @@ h2 {
 a.piller {
   display: block;
   color: $offwhite !important;
+  max-width: 380px;
   border-width: 0px;
   border-style: solid;
-  margin: 0 0 6rem;
+  margin: 0 auto 6rem;
   padding-bottom: 2rem;
   -webkit-box-shadow: -8px 8px 0px 0px rgba(0,0,0,0.1);
   -moz-box-shadow: -8px 8px 0px 0px rgba(0,0,0,0.1);
@@ -232,19 +233,20 @@ a.piller {
 // inspiration
 .inspiration-header {
   background: url(../images/svg/baller_animated.svg) right bottom no-repeat;
-  margin-bottom: 8rem;
+  background-size: auto 100px;
 }
 
 .inspiration {
-  
+  margin: 4rem 0;
 }
 
 //footer
 #footer {
+  margin-top: 6rem;
   text-align: center;
 
   img {
-    width: 240px;
+    width: 200px;
   }
 
   .sub-footer {
@@ -263,3 +265,21 @@ a.piller {
     }
   }
 } // footer
+
+// MOBILE SHIZZZZZZ
+
+@media (min-width: 320px) and (max-width: 768px) {
+
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .inspiration-header {
+    padding-bottom: 80px;
+    background-size: contain;
+  }
+
+}
