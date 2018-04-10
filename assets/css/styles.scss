@@ -71,6 +71,51 @@ h2 {
   font-weight: 900;
 }
 
+// Page Colors
+.bg-red {
+  background-color: $red;
+}
+.bg-dark {
+  background-color: $dark;
+}
+.bg-yellow {
+  background-color: $yellow;
+}
+
+
+.body-red {
+  .large-header {
+    background: $red;
+  }
+  #content {
+    h1,h2,h3,h4 {
+      color: $red;
+    }
+  }
+}// body-red
+
+.body-dark {
+  .large-header {
+    background: $dark;
+  }
+  #content {
+    h1,h2,h3,h4 {
+      color: $dark;
+    }
+  }
+}// body-dark
+
+.body-yellow {
+  .large-header {
+    background: $yellow;
+  }
+  #content {
+    h1,h2,h3,h4 {
+      color: $yellow;
+    }
+  }
+}// body-yellow
+
 // header
 #header-index {
   padding: 120px 0 0;
@@ -116,6 +161,26 @@ h2 {
   }
 
 } // header
+
+// inner-page header
+
+.large-header {
+  color: $offwhite;
+
+  .navbar-text {
+    font-weight: 900;
+  }
+
+  .nav-item {
+    margin-left: .8rem;
+  }
+
+  .page-title {
+    padding: 10rem 0 12rem;
+
+  }
+
+}//large-header
 
 // intro-text
 
@@ -243,6 +308,24 @@ a.piller {
 .inspiration {
   margin: 4rem 0;
 }
+
+
+// Inner pages - Second dimension
+
+#content {
+  padding: 4rem 0;
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  img {
+    margin: 4rem auto;
+  }
+
+}// end #content
+
 
 //footer
 #footer {
