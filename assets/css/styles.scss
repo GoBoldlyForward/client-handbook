@@ -72,38 +72,37 @@ h2 {
 }
 
 // header
-
-.branding {
-  font-size: 12px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 9999;
-
-  .title {
-    p {
-      font-size: 14px;
-      line-height: 1.2;
-      padding: 0 10px 0 0;
-      margin: 0 0 .5rem 0;
-    }
-  }
-
-  .logo {
-    .st0{fill: $dark;}
-    .st1{fill: $offwhite;}
-  }
-
-  .age-group {
-    border-top: 4px solid $dark;
-    margin-top: -9px;
-    padding: .5rem 0;
-  }
-
-}// branding
-
-#header {
+#header-index {
   padding: 120px 0 0;
+
+  .branding {
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+
+    .title {
+      p {
+        font-size: 14px;
+        line-height: 1.2;
+        padding: 0 10px 0 0;
+        margin: 0 0 .5rem 0;
+      }
+    }
+
+    .logo {
+      .st0{fill: $dark;}
+      .st1{fill: $offwhite;}
+    }
+
+    .age-group {
+      border-top: 4px solid $dark;
+      margin-top: -9px;
+      padding: .5rem 0;
+    }
+
+  }// branding
 
   .headline {
     margin-bottom: 2rem;
