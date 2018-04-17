@@ -75,7 +75,7 @@ h1 {
   font-size: 6rem;
   font-weight: 900;
   line-height: .85;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -334,12 +334,19 @@ a.piller {
     line-height: 1.2;
   }
 
-  img {
-    margin: 4rem auto;
-  }
-
   section {
-    margin: 8rem 0;
+    margin: 8rem auto;
+    max-width: 720px;
+
+    .section {
+      font-size: 1rem;
+      color: #888;
+      text-transform: uppercase;
+    }
+
+    img {
+      //margin: 4rem auto;
+    }
   }
 
 }// end #content
