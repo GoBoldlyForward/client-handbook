@@ -31,6 +31,16 @@
     background-color: $yellow !important;
   }
 
+  // button
+  .btn {
+    font-size: .8rem;
+    font-weight: 900;
+  }
+  .btn-dark {
+    background-color: $dark;
+    border-color: $dark;
+  }
+
 // Resets
 
 * {
@@ -334,9 +344,31 @@ a.piller {
     line-height: 1.2;
   }
 
+  li {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  hr {
+    border-color: rgba(0,0,0,.1);
+  }
+
+  .callout {
+    font-size: 3rem;
+    font-weight: 100;
+    text-align: center;
+  }
+
   section {
     margin: 8rem auto;
     max-width: 720px;
+
+    &.fullwidth {
+      max-width: 100%;
+      .callout {
+        text-align: center;
+      }
+    }
 
     .section {
       font-size: 1rem;
@@ -346,6 +378,10 @@ a.piller {
 
     img {
       //margin: 4rem auto;
+    }
+
+    .callout {
+      text-align: left;
     }
   }
 
