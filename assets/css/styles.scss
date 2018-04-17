@@ -20,6 +20,17 @@
     color: $yellow !important;
   }
 
+  // Page Colors
+  .bg-red {
+    background-color: $red !important;
+  }
+  .bg-dark {
+    background-color: $dark !important;
+  }
+  .bg-yellow {
+    background-color: $yellow !important;
+  }
+
 // Resets
 
 * {
@@ -71,17 +82,7 @@ h2 {
   font-weight: 900;
 }
 
-// Page Colors
-.bg-red {
-  background-color: $red;
-}
-.bg-dark {
-  background-color: $dark;
-}
-.bg-yellow {
-  background-color: $yellow;
-}
-
+// Utilities
 
 .body-red {
   .large-header {
@@ -115,6 +116,17 @@ h2 {
     }
   }
 }// body-yellow
+
+.fade {
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+
+   &:hover {
+      opacity: 0.5;
+  }
+}
 
 // header
 #header-index {
