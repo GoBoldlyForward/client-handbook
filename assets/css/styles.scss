@@ -178,6 +178,7 @@ h2 {
 
 .large-header {
   color: $offwhite;
+  margin-top: 50px;
 
   .navbar-text {
     font-weight: 900;
@@ -639,14 +640,14 @@ a.piller {
     transform: translate(-10%, 10%);
   }
 }
-.large-header {
+.static {
   position: relative;
   overflow: hidden;
 }
-.large-header > * {
+.static > * {
   z-index: 2;
 }
-.large-header:after {
+.static:after {
   -webkit-animation: grain 5s steps(10) infinite;
   -moz-animation: grain 5s steps(10) infinite;
   -ms-animation: grain 5s steps(10) infinite;
