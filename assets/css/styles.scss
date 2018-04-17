@@ -66,8 +66,9 @@ hr {
 // Typography
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.5;
+  margin-bottom: 2rem;
 }
 
 h1 {
@@ -78,7 +79,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 900;
 }
 
@@ -335,6 +336,10 @@ a.piller {
 
   img {
     margin: 4rem auto;
+  }
+
+  section {
+    margin: 8rem 0;
   }
 
 }// end #content
