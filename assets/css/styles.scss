@@ -378,6 +378,11 @@ a.piller {
 
     img {
       //margin: 4rem auto;
+
+      &.intro-image {
+        margin-bottom: 2rem;
+      }
+
     }
 
     .callout {
