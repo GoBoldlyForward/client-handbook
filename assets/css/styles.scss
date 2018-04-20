@@ -287,7 +287,7 @@ a.piller {
     background-color: $red;
 
     header:before {
-      background-image: url(../images/svg/piller-1-icn.svg);
+      background-image: url('../images/svg/piller-1-icn.svg');
     }
 
   }
@@ -413,6 +413,45 @@ a.piller {
     }
   }
 } // footer
+
+// nav variations
+nav {
+  justify-content: space-between;
+}
+
+.nav-down-scroll,
+.nav-up-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.nav-down-scroll {
+  margin-top: 10px;
+  background-color: transparent;
+  color: $red;
+
+  .st0 {
+    fill: $red;
+  }
+
+  &:before {
+    content: '';
+    background: $red;
+    display: block;
+    height: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+  }
+}
+
+.nav-up-scroll {
+
+}
 
 // MOBILE SHIZZZZZZ
 
