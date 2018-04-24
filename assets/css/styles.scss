@@ -3,6 +3,8 @@
 // Colors
 
   $dark:        #221e1d;
+  $grey:        #999999;
+  $lightgrey:   #cecece;
   $offwhite:    #fefdf0;
   $red:         #f33c17;
   $yellow:      #ffce04;
@@ -94,6 +96,50 @@ h2 {
 }
 
 // Utilities
+.underlined {
+  border-bottom: 2px solid;
+  a {
+    text-decoration: none;
+  }
+}
+
+.accordian-section {
+
+  h2 {
+    margin-bottom: 1.5rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    a:after {
+      content: "learn more";
+      color: $grey;
+      font-size: 10px;
+      display: inline-block;
+      margin-left: 0;
+      opacity: 0;
+      transition: all .25s ease-in-out;
+      -moz-transition: all .25s ease-in-out;
+      -webkit-transition: all .25s ease-in-out;
+
+    }
+    a:hover {
+      &:after {
+        opacity: 1;
+        margin-left: 10px
+      }
+    }
+  }
+  >div {
+    border-top: 2px solid $yellow;
+    padding: 2rem 0;
+  }
+}
+
+.collapse.in {
+  display: block;
+}
 
 .body-red {
   .large-header {
