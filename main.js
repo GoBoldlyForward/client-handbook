@@ -39,4 +39,23 @@
 
   });
 
+  if ($('body').attr('id') == 'inner-page') {
+    var prevPosY = 0;
+    $(window).scroll( function() {
+      var posY = this.scrollY,
+          headerZone = $('header').height(),
+          scrollState;
+
+      if (posY < headerZone ) {
+        $('nav').removeClass('nav--up nav--down').addClass('nav--header');
+      } else if (posY < prevPosY) {
+        $('nav').removeClass('nav--header nav--down').addClass('nav--up');
+      } else {
+        $('nav').removeClass('nav--up nav--header').addClass('nav--down');
+      }
+
+      prevPosY = posY;
+    });
+  }
+
 })( jQuery );

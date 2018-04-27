@@ -525,6 +525,96 @@ a.piller {
 
 }// end #content
 
+// Nav states
+nav {
+  .nav--up-show {
+    visibility: hidden;
+  }
+
+  .nav-center {
+    margin: 0;
+
+    li {
+      margin: 0 20px;
+    }
+
+    a {
+      color: $offwhite;
+      font-weight: 600;
+    }
+  }
+
+  &.nav--header {
+    background-color: transparent;
+  }
+
+  &.nav--down {
+    background-color: transparent;
+    color: $dark;
+    margin-top: 10px;
+    .st0 {
+      fill: $dark;
+    }
+    &:before {
+      content: "";
+      background-color: $dark;
+      display: block;
+      height: 10px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &.nav--up {
+    background-color: $dark;
+
+    .nav--up-show {
+      visibility: visible;
+    }
+
+    .nav--up-hide {
+      display: none;
+    }
+  }
+}
+
+.body-red {
+  .nav--up {
+    background-color: $red;
+  }
+
+  .nav--down {
+    background-color: transparent;
+    color: $red;
+    .st0 {
+      fill: $red;
+    }
+    &:before {
+      content: "";
+      background-color: $red;
+    }
+  }
+}
+
+.body-yellow {
+  .nav--up {
+    background-color: $yellow;
+  }
+
+  .nav--down {
+    background-color: transparent;
+    color: $yellow;
+    .st0 {
+      fill: $yellow;
+    }
+    &:before {
+      content: "";
+      background-color: $yellow;
+    }
+  }
+}
 
 //footer
 #footer {
@@ -585,6 +675,58 @@ a.piller {
     h1 {
       margin-bottom: 1rem;
     }
+  }
+
+  nav.nav--up,
+  nav.nav--down,
+  nav.nav--header {
+    background-color: $dark;
+    margin-top: 0;
+    color: $offwhite;
+
+    .st0 {
+      fill: $offwhite;
+    }
+
+    .nav--up-show {
+      display: none;
+      visibility: hidden;
+    }
+
+    .nav--up-hide {
+      display: block;
+    }
+  }
+
+  .body-red {
+    nav.nav--up,
+    nav.nav--down,
+    nav.nav--header {
+      background-color: $red;
+      color: $offwhite;
+
+      .st0 {
+        fill: $offwhite;
+      }
+    }
+  }
+
+  .body-yellow {
+    nav.nav--up,
+    nav.nav--down,
+    nav.nav--header {
+      background-color: $yellow;
+      color: $offwhite;
+
+      .st0 {
+        fill: $offwhite;
+      }
+    }
+  }
+
+  .nav-center,
+  .nav--up-show {
+    display: none !important;
   }
 
 } // end mobile SHIZZZZZZ
