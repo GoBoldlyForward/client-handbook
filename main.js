@@ -2,57 +2,30 @@
 
 (function( $ ){
 
-  /* main nav title magic */
-  var navTitle = $(".navbar");
-      fadeIn = "fade-in";
-      header = $('.large-header').height();
-
-  $(window).scroll(function() {
-    if( $(this).scrollTop() > header ) {
-      navTitle.addClass(fadeIn);
-    } else {
-      navTitle.removeClass(fadeIn);
-    }
-  });
-
-  /* Secondary nav */
-  var volNavigation = $(".chapter-nav");
-      sticky = "stickemup";
-      header = $('.large-header').height();
-
-  $(window).scroll(function() {
-    if( $(this).width() > 960 ) {
-      if( $(this).scrollTop() > header ) {
-        volNavigation.addClass(sticky);
-      } else {
-        volNavigation.removeClass(sticky);
-      }
-  }
-    if( $(this).width() < 960 ) { {
-    if($(this).scrollTop() + $(this).height() == $(document).height()) {
-      volNavigation.addClass(sticky);
-    } else {
-      volNavigation.removeClass(sticky);
-    }
-   }
-  }
-
-  });
-
   if ($('body').attr('id') == 'inner-page') {
     var prevPosY = 0;
     $(window).scroll( function() {
-      var posY = this.scrollY,
-          headerZone = $('header').height(),
-          scrollState;
+      var posY          = this.scrollY,
+          headerZone    = $('header').height(),
+          volNavigation = $(".chapter-nav"),
+              sticky    = "stickemup";
 
-      if (posY < headerZone ) {
-        $('nav').removeClass('nav--up nav--down').addClass('nav--header');
-      } else if (posY < prevPosY) {
-        $('nav').removeClass('nav--header nav--down').addClass('nav--up');
+      if ($(window).width() > 960) {
+        if (posY < headerZone) {
+          $('nav').removeClass('nav--up nav--down stickemup').addClass('nav--header');
+        } else if (posY < prevPosY) {
+          $('nav').removeClass('nav--header nav--down').addClass('nav--up');
+        } else {
+          $('nav').removeClass('nav--up nav--header').addClass('nav--down');
+          volNavigation.addClass(sticky);
+        }
       } else {
-        $('nav').removeClass('nav--up nav--header').addClass('nav--down');
-      }
+        if($(this).scrollTop() + $(this).height() == $(document).height()) {
+          volNavigation.addClass(sticky);
+        } else {
+          volNavigation.removeClass(sticky);
+        }
+    }
 
       prevPosY = posY;
     });
