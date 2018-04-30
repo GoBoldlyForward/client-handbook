@@ -146,7 +146,7 @@ h2 {
     background: $red;
   }
   .chapter-nav a {
-    color: $red;
+    color: $dark;
   }
   #content {
     h1,h2,h3,h4,a {
@@ -174,7 +174,7 @@ h2 {
     background: $yellow;
   }
   .chapter-nav a {
-    color: $yellow;
+    color: $dark;
   }
   #content {
     h1,h2,h3,h4,a {
@@ -273,8 +273,7 @@ h2 {
   }
 
   .page-title {
-    padding: 10rem 0 12rem;
-
+    padding: 4rem 0 5rem;
   }
 
 }//large-header
@@ -283,7 +282,7 @@ h2 {
 .chapter-nav {
   width: 100%;
   position: fixed;
-  bottom: 120px;
+  bottom: 20px;
   z-index: 5;
 
   >div {
@@ -315,6 +314,10 @@ h2 {
     }
     .right-nav {
       margin-right: 0;
+    }
+
+    &.nav--up {
+      background-color: transparent;
     }
   }
 
@@ -527,8 +530,15 @@ a.piller {
 
 // Nav states
 nav {
+  transition: all .25s ease-in-out;
+
+  .st0 {
+    transition: all .25s ease-in-out;
+  }
+
   .nav--up-show {
-    visibility: hidden;
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
   }
 
   .nav-center {
@@ -546,51 +556,70 @@ nav {
 
   &.nav--header {
     background-color: transparent;
+
+    &:before {
+      content: "";
+      height: 0;
+    }
   }
 
   &.nav--down {
     background-color: transparent;
     color: $dark;
-    margin-top: 10px;
     .st0 {
       fill: $dark;
     }
     &:before {
       content: "";
-      background-color: $dark;
-      display: block;
-      height: 10px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
+      height: 5px;
     }
   }
 
   &.nav--up {
-    background-color: $dark;
+    &:before {
+      content: "";
+      height: 60px;
+      z-index: -1;
+    }
 
     .nav--up-show {
-      visibility: visible;
+      opacity: 1;
     }
 
     .nav--up-hide {
       display: none;
     }
   }
+
+  &.nav--up,
+  &.nav--down,
+  &.nav--header {
+    &:before {
+      content: "";
+      background-color: $dark;
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      transition: height .25s ease-in-out;
+    }
+  }
 }
 
 .body-red {
-  .nav--up {
-    background-color: $red;
-  }
-
   .nav--down {
     background-color: transparent;
     color: $red;
     .st0 {
       fill: $red;
     }
+  }
+
+  nav.nav--up,
+  nav.nav--down,
+  nav.nav--header {
     &:before {
       content: "";
       background-color: $red;
@@ -599,16 +628,17 @@ nav {
 }
 
 .body-yellow {
-  .nav--up {
-    background-color: $yellow;
-  }
-
   .nav--down {
     background-color: transparent;
     color: $yellow;
     .st0 {
       fill: $yellow;
     }
+  }
+
+  nav.nav--up,
+  nav.nav--down,
+  nav.nav--header {
     &:before {
       content: "";
       background-color: $yellow;
@@ -657,6 +687,10 @@ nav {
     font-size: 1.5rem;
   }
 
+  .large-header {
+    height: initial;
+  }
+
   .navbar-nav {
     flex-direction: row;
   }
@@ -677,6 +711,7 @@ nav {
     }
   }
 
+  nav,
   nav.nav--up,
   nav.nav--down,
   nav.nav--header {
@@ -699,6 +734,7 @@ nav {
   }
 
   .body-red {
+    nav,
     nav.nav--up,
     nav.nav--down,
     nav.nav--header {
@@ -712,6 +748,7 @@ nav {
   }
 
   .body-yellow {
+    nav,
     nav.nav--up,
     nav.nav--down,
     nav.nav--header {
@@ -727,6 +764,13 @@ nav {
   .nav-center,
   .nav--up-show {
     display: none !important;
+  }
+
+  nav.chapter-nav,
+  nav.chapter-nav.nav--up,
+  nav.chapter-nav.nav--down,
+  nav.chapter-nav.nav--header {
+    background-color: transparent;
   }
 
 } // end mobile SHIZZZZZZ
