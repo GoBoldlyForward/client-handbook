@@ -8,7 +8,7 @@
       var posY          = this.scrollY,
           headerZone    = $('header').height(),
           volNavigation = $(".chapter-nav"),
-              sticky    = "stickemup";
+          sticky        = "stickemup";
 
       if ($(window).width() > 960) {
         if (posY < headerZone) {
@@ -20,7 +20,7 @@
           volNavigation.addClass(sticky);
         }
       } else {
-        if($(this).scrollTop() + $(this).height() == $(document).height()) {
+        if ($(this).scrollTop() + $(this).height() > $(document).height() - 300) {
           volNavigation.addClass(sticky);
         } else {
           volNavigation.removeClass(sticky);
