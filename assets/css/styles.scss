@@ -469,6 +469,37 @@ a.piller {
   margin: 4rem 0;
 }
 
+.inspiration-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.inspiration-img-wrapper {
+  margin-right: 1rem;
+  &:last-child {
+    margin-right: 0;
+  }
+
+
+}
+
+.inspo-img-eye {
+  flex: 0.802;
+}
+
+.inspo-img-expand {
+  flex: 1.3504;
+}
+
+.inspo-img-path {
+  flex: 0.753;
+}
+
+.inspo-img-power {
+  flex: 0.7728;
+}
 
 // Inner pages - Second dimension
 
@@ -782,6 +813,18 @@ nav {
   nav.chapter-nav.nav--down,
   nav.chapter-nav.nav--header {
     background-color: transparent;
+  }
+
+  .inspiration-col {
+    flex-direction: column;
+  }
+
+  .inspiration-img-wrapper {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
 } // end mobile SHIZZZZZZ
